@@ -6,23 +6,29 @@ int main()
     char mayor[50];
     int population;
 
-    printf("Municipal Financial Management System\n");
+    printf("============================================\n");
+    printf("   MUNICIPAL FINANCIAL MANAGEMENT SYSTEM\n");
+    printf("============================================\n\n");
+
     printf("Welcome to Windhoek Municipality\n\n");
 
     printf("Enter Municipality Name: ");
-    scanf("%49s", municipality);
+    fgets(municipality, sizeof(municipality), stdin);
 
     printf("Enter Mayor's Name: ");
-    scanf("%49s", mayor);
+    fgets(mayor, sizeof(mayor), stdin);
 
     printf("Enter Population: ");
     scanf("%d", &population);
 
-    printf("\n--------------------------------\n");
-    printf("Municipality: %s\n", municipality);
-    printf("Mayor: %s\n", mayor);
-    printf("Population: %d\n", population);
-    printf("--------------------------------\n");
+    printf("\n\n");
+    printf("============================================\n");
+    printf("       MUNICIPALITY INFORMATION REPORT\n");
+    printf("============================================\n");
+    printf("Municipality Name : %s", municipality);
+    printf("Mayor's Name      : %s", mayor);
+    printf("Population        : %d\n", population);
+    printf("============================================\n");
 
     return 0;
 }
